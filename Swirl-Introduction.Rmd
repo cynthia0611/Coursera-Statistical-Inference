@@ -1,5 +1,8 @@
 ```
-We want to emphasize a couple of important points here. First, a statistic (singular) is a number computed from a sample of data. We use statistics to infer information about a population. Second, a random variable is an outcome from an experiment. Deterministic processes, such as computing means or variances, applied to random variables, produce additional random variables which have their own distributions. It's important to keep straight which distributions you're talking about.
+| We want to emphasize a couple of important points here. First, a statistic (singular) is
+| a number computed from a sample of data. We use statistics to infer information about a
+| population. Second, a random variable is an outcome from an experiment. Deterministic
+| processes, such as computing means or variances, applied to random variables, produce
+| additional random variables which have their own distributions. It's important to keep
+| straight which distributions you're talking about.
 ```
-
-
