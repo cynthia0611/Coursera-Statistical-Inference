@@ -1,0 +1,22 @@
+####Swirl Practice Probability 2
+```
+| Continuous random variables are usually associated with measurements of time, distance,
+| or some biological process since they can take on any value, often within some specified
+| range. Limitations of precision in taking the measurements may imply that the values are
+| discrete; we in fact consider them continuous.
+```
+
+```
+| The cumulative distribution function (CDF) of a random variable X, either discrete or
+| continuous, is the function F(x) equal to the probability that X is less than or equal to
+| x. In the example above, the area of the blue triangle represents the probability that
+| the random variable was less than or equal to the value 1.6.
+```
+
+```
+| The survivor function S(x) of a random variable X is defined as the function of x equal
+| to the probability that the random variable X is greater than the value x. This is the
+| complement of the CDF F(x), in our example, the portion of the lower triangle that is not
+| shaded.
+```
+
