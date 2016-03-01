@@ -34,3 +34,36 @@ Selection: 1
 
 Selection: 3
 ```
+```
+| The probability of rolling an even number is 1/2 or 18/36. There are 10 ways of rolling a
+| number greater than '8' - 4 ways for rolling '9', 3 for '10', 2 for '11' and 1 for '12'.
+| How big is the intersection between rolling an even number and those greater than '8'?
+
+1: (18+10-4)/36
+2: (18+10-2)/36
+3: (18+4-2)/36
+4: (18+10)/36
+
+Selection: 1
+```
+```
+| A deck of cards is a set of 52 cards, 4 suits of 13 cards each. There are two red suits,
+| diamonds and hearts, and two black suits, spades and clubs. Each of the 13 cards in a
+| suit has a value - an ace which is sometimes thought of as 1, a number from 2 to 10, and
+| 3 face cards, king, queen, and jack. We've created a deck in R for you. Type 'deck' to
+| see it now.
+
+| Suppose you draw a face card and don't replace it in the deck. What is the probability
+| that when you draw a second card it also will be a face card of the same suit?
+1: 12/51
+2: 11/52
+3: 0
+4: 11/51
+
+Selection: 4
+
+| Suppose you draw a face card and don't replace it in the deck. What is the probability
+| that when you draw a second card it also will be a face card of the same suit?
+> 2/51
+[1] 0.03921569
+```
