@@ -17,3 +17,28 @@
 | It follows that E(aX+bY)=aE(X)+bE(Y).
 ```
 
+```
+| For a continuous random variable X, the expected value is defined analogously as it was for the
+| discrete case. Instead of summing over discrete values, however, the expectation integrates over a
+| continuous function.
+
+| For a discrete
+| random variable X with PMF p(x), E(X) is defined as a sum, over all possible values x, of the quantity
+| x*p(x).
+
+| It follows that for continuous random variables, E(X) is the area under the function t*f(t), where
+| f(t) is the PDF (probability density function) of X. This definition borrows from the definition of
+| center of mass of a continuous body.
+
+```
+
+> apply function
+```
+| Each of these 10 samples will have a mean, right? We can use the R function apply to calculate the
+| mean of each row of the matrix allsam. We simply call apply with the arguments allsam, 1, and mean.
+| The second argument, 1, tells 'apply' to apply the third argument 'mean' to the rows of the matrix.
+```
+
+
+
+
