@@ -10,7 +10,7 @@ p(father or mother) = p(father) + p(mother) - p(father and mother)
 17% = 12% + p(mother) - 6%
 ```
 ##### 2
-```
+
 The Uniform Distribution
 
 Description
@@ -19,7 +19,7 @@ dunif gives the density,
 punif gives the distribution function, 
 qunif gives the quantile function,
 and runif generates random deviates.
-
+```
 qunif(p, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)
 
 qunif(.75,0,1) #0.75
@@ -32,7 +32,8 @@ This density looks like a box. The point so that the area below it is 0.75 is 0.
 sum(pX) - sum(Y(1-p))=0
 pX = (1-p)Y
 
-Your expected earnings is −pX+(1−p)Y=0 Then it must be the case that p1−p=YX Or that the ratio of the payouts has to equal the odds.
+Your expected earnings is −pX+(1−p)Y=0 Then it must be the case that p1−p=YX 
+Or that the ratio of the payouts has to equal the odds.
 ```
 
 ##### 4
@@ -42,7 +43,7 @@ central tendency is 0
 The median must be 0 since 50 percent of the mass is below 0 and 50% is above
 ```
 ###### 5
-```
+
 Consider the following PMF shown below in R
 x <- 1:4
 p <- x/sum(x)
@@ -52,15 +53,17 @@ temp
 
 What is the mean? 
 
+```
 sum(p*x)
 ```
 
 ##### 6
-```
+
 A web site (www.medicine.ox.ac.uk/bandolier/band64/b64-7.html) for home pregnancy tests cites the following: “When the subjects using the test were women who collected and tested their own samples, the overall sensitivity was 75%. Specificity was also low, in the range 52% to 75%.” Assume the lower value for the specificity. Suppose a subject has a positive test and that 30% of women taking pregnancy tests are actually pregnant. What number is closest to the probability of pregnancy given the positive test?
 
 (Hints, watch Lecture 3 at around 7 minutes for a similar example. Also, there's a lot of Bayes' rule problems and descriptions out there, for example here's one for HIV testing. Note, discussions of Bayes' rule can get pretty heady. So if it's new to you, stick to basic treatments of the problem. Also see Chapter 3 Question 5.)
 
+```
 D: pregnant
 ~D: not pregnant
 +: positive test result
