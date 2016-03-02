@@ -10,7 +10,6 @@
 | average) as the sum of a bunch of numbers divided by the number of numbers you added together. This is
 | consistent with the formal definition of E(X) if all the numbers are equally weighted.
 ```
-> Expectations
 ```
 | One of the nice properties of the expected value operation is that it's linear. This means that, if c
 | is a constant, then E(cX) = c*E(X). Also, if X and Y are two random variables then E(X+Y)=E(X)+E(Y).
