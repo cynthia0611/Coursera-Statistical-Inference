@@ -1,5 +1,5 @@
 #### Swirl Practice Expectations
-> Expectations
+##### Expectations
 ```
 | The expected value of a random variable X, E(X), is a measure of its central tendency. For a discrete
 | random variable X with PMF p(x), E(X) is defined as a sum, over all possible values x, of the quantity
@@ -12,7 +12,8 @@
 | One of the nice properties of the expected value operation is that it's linear. This means that, if c
 | is a constant, then E(cX) = c*E(X). Also, if X and Y are two random variables then E(X+Y)=E(X)+E(Y).
 | It follows that E(aX+bY)=aE(X)+bE(Y).
-
+```
+```
 | For a continuous random variable X, the expected value is defined analogously as it was for the
 | discrete case. Instead of summing over discrete values, however, the expectation integrates over a
 | continuous function.
@@ -27,7 +28,7 @@
 ```
 
 
-> apply function
+##### apply function
 ```
 | Each of these 10 samples will have a mean, right? We can use the R function apply to calculate the
 | mean of each row of the matrix allsam. We simply call apply with the arguments allsam, 1, and mean.
