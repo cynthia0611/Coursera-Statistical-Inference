@@ -20,3 +20,8 @@
 | shaded.
 ```
 
+```
+| A probability model connects data to a population using assumptions.
+| Be careful to distinguish between population medians and sample medians.
+| A sample median is an estimator of a population median (the estimand).
+```
