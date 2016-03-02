@@ -1,7 +1,6 @@
 >1. 
 
 Consider influenza epidemics for two parent heterosexual families. Suppose that the probability is 17% that at least one of the parents has contracted the disease. The probability that the father has contracted influenza is 12% while the probability that both the mother and father have contracted the disease is 6%. What is the probability that the mother has contracted influenza?
-
 ```
 p(father or mother) = 17%
 p(father) = 12%
@@ -11,11 +10,34 @@ p(father or mother) = p(father) + p(mother) - p(father and mother)
 17% = 12% + p(mother) - 6%
 ```
 >2
-
-
 ```
-##### The Uniform Distribution
+The Uniform Distribution
 
 Description
-These functions provide information about the uniform distribution on the interval from min to max. dunif gives the density, punif gives the distribution function qunif gives the quantile function and runif generates random deviates.
+These functions provide information about the uniform distribution on the interval from min to max. 
+dunif gives the density, 
+punif gives the distribution function, 
+qunif gives the quantile function,
+and runif generates random deviates.
+
+qunif(p, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)
+
+qunif(.75,0,1) #0.75
 ```
+>3
+```
+sum(pX) - sum(Y(1-p))=0
+pX = (1-p)Y
+```
+
+>4
+```
+central tendency is 0
+```
+>5
+
+
+
+
+
+
