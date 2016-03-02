@@ -14,8 +14,7 @@
 | One of the nice properties of the expected value operation is that it's linear. This means that, if c
 | is a constant, then E(cX) = c*E(X). Also, if X and Y are two random variables then E(X+Y)=E(X)+E(Y).
 | It follows that E(aX+bY)=aE(X)+bE(Y).
-```
-```
+
 | For a continuous random variable X, the expected value is defined analogously as it was for the
 | discrete case. Instead of summing over discrete values, however, the expectation integrates over a
 | continuous function.
