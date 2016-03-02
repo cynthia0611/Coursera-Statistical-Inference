@@ -1,1 +1,12 @@
 ####Swirl Practice 4: ConditionalProbability
+```
+DLR_- is small (less than 1). Post-test odds =
+| Pre-test odds * DLR_- so post-test odds are a fraction of the pre-test odds.
+```
+
+```
+iid. 
+Random variables are said to be iid if they are independent and identically
+| distributed. By independent we mean "statistically unrelated from one another". Identically
+| distributed means that "all have been drawn from the same population distribution".
+```
