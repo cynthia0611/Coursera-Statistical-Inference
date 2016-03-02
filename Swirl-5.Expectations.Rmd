@@ -1,4 +1,5 @@
 #### Swirl Practice Expectations
+> Expectations
 ```
 | The expected value of a random variable X, E(X), is a measure of its central tendency. For a discrete
 | random variable X with PMF p(x), E(X) is defined as a sum, over all possible values x, of the quantity
