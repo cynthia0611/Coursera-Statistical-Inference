@@ -14,7 +14,7 @@ p(father or mother) = p(father) + p(mother) - p(father and mother)
 
 
 ```
-###### The Uniform Distribution
+##### The Uniform Distribution
 
 Description
 These functions provide information about the uniform distribution on the interval from min to max. dunif gives the density, punif gives the distribution function qunif gives the quantile function and runif generates random deviates.
