@@ -1,0 +1,19 @@
+##### Swirl practice Multi-Variable Examples 3
+
+| Now let's use R's subsetting capability to look at the rates of hunger for the different genders to see how, or even
+| if, they differ.  Once again use the R function lm to generate the linear model in which the rate of hunger (Numeric)
+| for female children depends on Year. Put the result in the variable lmF. You'll have to use the R construct
+| x[hunger$Sex=="Female"] to pick out both the correct Numerics and the correct Years.
+
+'''
+> lmF <- lm(Numeric[hunger$Sex="Female"]~Year,hunger)
+Error: unexpected '=' in "lmF <- lm(Numeric[hunger$Sex="
+> lmF <- lm(Numeric[hunger$Sex=="Female"] ~ Year,hunger)
+Error in model.frame.default(formula = Numeric[hunger$Sex == "Female"] ~  : 
+  variable lengths differ (found for 'Year')
+> lmF <- lm(Numeric[hunger$Sex=="Female"] ~ Year[hunger$Sex=="Female"],hunger)
+'''
+
+
+
+
