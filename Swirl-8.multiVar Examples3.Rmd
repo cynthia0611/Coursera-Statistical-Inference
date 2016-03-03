@@ -5,7 +5,7 @@ if, they differ.  Once again use the R function lm to generate the linear model 
 for female children depends on Year. Put the result in the variable lmF. You'll have to use the R construct
 x[hunger$Sex=="Female"] to pick out both the correct Numerics and the correct Years.
 
-'''
+
 > lmF <- lm(Numeric[hunger$Sex="Female"]~Year,hunger)
 Error: unexpected '=' in "lmF <- lm(Numeric[hunger$Sex="
 
@@ -14,7 +14,7 @@ Error in model.frame.default(formula = Numeric[hunger$Sex == "Female"] ~  :
   variable lengths differ (found for 'Year')
   
 > lmF <- lm(Numeric[hunger$Sex=="Female"] ~ Year[hunger$Sex=="Female"],hunger)
-'''
+
 
 
 
