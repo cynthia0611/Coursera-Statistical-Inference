@@ -1,0 +1,6 @@
+##### Swirl practice Residuals diagnostic & Variance
+
+Residuals of individual samples are sometimes treated as ```having the same variance```, which is estimated as the sample
+variance of the entire set of residuals. Theoretically, however, residuals of individual samples have different
+variances and these differences can become large in the presence of outliers. ```Standardized and Studentized``` residuals
+attempt to ```compensate``` for this effect in two slightly different ways. Both use ```hat values```.
