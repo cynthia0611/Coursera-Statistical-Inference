@@ -1,5 +1,5 @@
 
-the ```mean``` characterizes the center of a distribution
+the #####mean characterizes the center of a distribution
 the ```variance``` and its square root, the standard deviation, characterize the distribution's spread around the mean.
 
 
