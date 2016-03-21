@@ -2,7 +2,13 @@
 ```{r}
 σ2/n
 ```
-
+2. Suppose that diastolic blood pressures (DBPs) for men aged 35-44 are normally distributed with a mean of 80 (mm Hg) and a standard deviation of 10. About what is the probability that a random 35-44 year old has a DBP less than 70?
 ```{r}
  pnorm(70,80,10)
+ # [1] 0.1586553
+```
+3.  Brain volume for adult women is normally distributed with a mean of about 1,100 cc for women with a standard deviation of 75 cc. What brain volume represents the 95th percentile?
+```{r}
+qnorm(.95,1100,75)
+[1] 1223.364
 ```
