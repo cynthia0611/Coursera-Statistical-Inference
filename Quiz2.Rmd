@@ -32,7 +32,8 @@ qnorm(0.95, mean = 1100, sd = 75/sqrt(100))
 
 7 Consider a standard uniform density. The mean for this density is .5 and the variance is 1 / 12. You sample 1,000 observations from this distribution and take the sample mean, what value would you expect it to be near?
 ```{r}
-According to the Law of Large Numbers the theoretical mean and sample mean should be similar, therefore 0.5 is expected.
+According to the Law of Large Numbers the theoretical mean and sample mean should be similar, 
+therefore 0.5 is expected.
 ```
 
 8 The number of people showing up at a bus stop is assumed to be
