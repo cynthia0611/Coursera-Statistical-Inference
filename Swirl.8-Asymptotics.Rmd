@@ -1,0 +1,55 @@
+##### CLT
+a topic which describes how statistics behave as sample sizes get very large and approach infinity.
+the CENTRAL LIMIT THEOREM (CLT) - one of the most important theorems in all of statistics. It states that the distribution of averages of iid variables (properly normalized) becomes that of a standard normal as the sample size increases.
+
+properly normalized
+means that you transformed the sample mean X'
+subtracted the population mean mu from it and divided the difference by sigma/sqrt(n).
+
+the CLT says that for large n, this normalized variable, (X'-mu)/(sigma/sqrt(n)) is almost normally distributed with mean 0 and variance 1
+
+Since the population std deviation sigma is unknown, sigma/sqrt(n) is often approximated by the standard error of the sample mean
+
+##### confidence intervals
+The quantity X' plus or minus 2 sigma/sqrt(n) is called a 95% interval for mu. The 95% says that if one were to repeatedly get samples of size n, about 95% of the intervals obtained would contain mu, the quantity we're trying to estimate.
+
+Note that for a 95% confidence interval we divide (100-95) by 2 (since we have both left and right tails) and add the result to 95 to compute the quantile we need. The 97.5 quantile is actually 1.96, but for simplicity it's often just rounded up to 2.
+
+R function ```qnorm``` to find the 95th quantile for a standard normal distribution. Remember that qnorm takes a probability as an input.
+
+How can we compute a confidence interval if we don't know p(1-p)? 
+We could be conservative and try to maximize it so we get the largest possible confidence interval. Calculus tells us that p(1-p) is maximized when p=1/2, so we get the biggest 95% confidence interval when we set p=1/2 in the formula p'+/- 2*sqrt(p(1-p)/n).
+
+p' +/- 1/sqrt(n)
+
+##### Wald confidence interval
+Another technique for calculating confidence intervals for binomial distributions is to replace p with p'.
+
+p'+ +/-*qnorm(quntile)*sqirt(p'(1-p')/n)
+ .6+c(-1,1)*qnorm(.975)*sqrt(.6*(1-.6)/100)
+
+binom.test
+binom.test(60,100)$conf.int
+
+##### Agresti/Coull interval
+A quick fix to the problem of having a small n is to use the Agresti/Coull interval. This simply means we add 2 successes and 2 failures to the counts when calculating the proportion p'.
+
+Specifically, if X is the number of successes out of the 20 coin flips, then instead of setting p'=X/20, let p'=(X+2)/24. We use 24 as the number of trials since we've added 2 successes and 2 failures to the counts.
+
+However, this technique might make the confidence interval too wide.
+
+#### Poisson distributions and confidence intervals
+The number of failures X is Poisson distributed with parameter (lambda*t).
+failure rate, lambda_hat=x/t
+the variance of our estimated failure rate is lambda/t
+approximate the variance of lambda_hat as lambda_hat/t
+
+to calculate a 95% confidence interval is 
+est mean + c(-1,1)*qnorm(.975)*sqrt(est var)
+lamb+c(-1,1)*qnorm(.975)*sqrt(lamb/94.32)
+
+poisson.test(5,94.32)$conf
+
+
+
+
