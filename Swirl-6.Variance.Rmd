@@ -49,7 +49,7 @@ sd(apply(matrix(rnorm(10000),1000),1,mean))
 in poisson: var(x) = lambda
 
 ###Simulation
-## Random normal samples
+#### Random normal samples
 The R function rnorm(n,mean,sd) generates n independent (hence uncorrelated) random normal samples with the specified mean and standard deviation. The defaults for the latter are mean 0 and standard deviation 1. 
 This returns the standard deviation of 1000 averages, each of a sample of 10 random normal numbers with mean 0 and standard deviation 1. The theory tells us that the standard error, s/sqrt(n), of the sample means indicates how much averages of random samples of size n (in this case 10) vary.
 
@@ -59,26 +59,26 @@ sd(apply(matrix(rnorm(10000),1000),1,mean))
 1/sqrt(10)
 ```
 
-## Standard uniform distributions
+#### Standard uniform distributions
 Standard uniform distributions have variance 1/12. The theory tells us the standard error of means of independent samples of size n would have 1/sqrt(12*n)
 ```{r}
 1/sqrt(120)
 sd(apply(matrix(runif(10000),1000),1,mean))
 ```
-## Poisson
+#### Poisson
 averages of 10 Poisson(4) samples and compute the standard error of these means
 ```{r}
 sd(apply(matrix(rpois(10000,4),1000),1,mean))
 2/sqrt(10)
 ```
 
-##averages of 10 coin flips,assume Fair coin flips have variance 0.25
+#### Averages of 10 coin flips,assume Fair coin flips have variance 0.25
 ```{r}
 1/(2*sqrt(10))
 sd(apply(matrix(sample(0:1,10000,TRUE),1000),1,mean))
 ```
 
-## Chebyshev's inequality
+#### Chebyshev's inequality
 It states that the probability that a random variable X is at least k standard deviations from its mean is less than 1/(k^2).
 
 
