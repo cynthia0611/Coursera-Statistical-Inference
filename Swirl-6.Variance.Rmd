@@ -1,5 +1,50 @@
 
-the #####mean characterizes the center of a distribution
-the ```variance``` and its square root, the standard deviation, characterize the distribution's spread around the mean.
+mean 
+characterizes the center of a distribution
+
+variance and its square root
+the standard deviation, characterize the distribution's spread around the mean.
+
+sample mean estimates the population mean
+the sample variance estimates the population variance
+ 
+The variance of a random variable, as a measure of spread or dispersion, is, like a mean, defined as an expected value. It is the expected squared distance of the variable from its mean.
+Var(X) = E( (X-mu)^2 ) = E( (X-E(X))^2 ) = E(X^2)-E(X)^2
+
+E(X), the expected value of a random variable from the population, is mu, the mean of that population.
+Higher variance implies more spread around a mean than lower variance.
+
+linearity of expectations that, if a is a constant, then Var(aX)=a^2*Var(X).
+
+compute E(X^2)
+From the definition of expected values, this means we'll take a weighted sum over all possible values of X^2. The weight is the probability of X occurring.
+
+several normal distributions all centered around a common mean 0, but with different standard deviations.
+the thinner the bell the smaller the standard deviation and the bigger the standard deviation the fatter the bell.
+
+population variance sigma^2 and a sample variance s^2
+
+The sample variance is defined as the sum of n squared distances from the sample mean divided by (n-1), where n is the number of samples or observations
+
+sample variance is an unbiased estimator of population variance.
+
+Recall that the average of random samples from a population is itself a random variable with a distribution centered around the population mean. Specifically, E(X') = mu, where X' represents a sample mean and mu is the population mean.
+
+We can show that, if the population is infinite, the variance of the sample mean is the population variance divided by the sample size.
+
+Recall that Var is an expected value and expected values are linear. Also recall that our samples X_1, X_2,...,X_n are independent. What does Var(Sum(X_i)) equal?
+Sum(Var(X_i))
+
+Var(X')=Var(1/n*Sum(X_i))=(1/n^2)*Var(Sum(X_i))=(1/n^2)*Sum(sigma^2)=sigma^2/n for infinite populations when our samples are independent.
+
+the variance of a sample mean is sigma^2 / n and we estimate it with s^2 / n
+s / sqrt(n), is the standard error of the sample mean.
+
+The R function rnorm(n,mean,sd) generates n independent (hence uncorrelated) random normal samples with the specified mean and standard deviation.
+
+sd(apply(matrix(rnorm(10000),1000),1,mean))
+1/sqrt(10) ###(s / sqrt(n))####
+
+
 
 
