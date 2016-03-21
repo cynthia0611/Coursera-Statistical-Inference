@@ -43,7 +43,8 @@ s / sqrt(n), is the standard error of the sample mean.
 The R function rnorm(n,mean,sd) generates n independent (hence uncorrelated) random normal samples with the specified mean and standard deviation.
 
 sd(apply(matrix(rnorm(10000),1000),1,mean))
-1/sqrt(10) ###(s / sqrt(n))####
+1/sqrt(10) 
+###(s / sqrt(n))
 
 
 
