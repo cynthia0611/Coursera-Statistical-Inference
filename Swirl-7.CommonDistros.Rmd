@@ -38,7 +38,7 @@ Z = (X -mu)/sigma is normally distributed with mean 0 and variance 1, i.e., Z ~ 
 
 The converse is also true. If Z is standard normal, i.e., Z ~ N(0,1), then the random variable X defined as X = mu + sigma*Z is normally distributed with mean mu and variance sigma^2, i.e., X ~ N(mu, sigma^2)
 
-#### calculating quantile
+##### calculating quantile
 These formulae allow you to easily compute quantiles (and thus percentiles) for ANY normally distributed variable if you know its mean and variance.R's qnorm function
 
 e.g. The 97.5th percentile of a normal distribution with mean 3 and standard deviation 2.
@@ -47,7 +47,7 @@ qnorm(.975,3,2)
 X = mu + sigma*Z
 3+2*1.96
 
-#### calculating Probability
+##### calculating Probability
 Suppose you have a normal distribution with mean 1020 and standard deviation of 50 and you want to compute the probability that the associated random variable X > 1200.
 pnorm(1200,1020,50,lower.tail = FALSE)
 
@@ -55,3 +55,30 @@ transform the given distribution to a standard normal
 pnorm((1200-1020)/50,lower.tail = FALSE)
 
 ### Poisson
+the Poisson distribution models counts or number of event in some interval of time
+
+The PMF of the Poisson distribution has one parameter, lambda.
+P(X=x)=(lambda^x)e^(-lambda)/x!
+The mean and variance of the Poisson distribution are both lambda
+X~Poisson(lambda*t)
+lambda is the expected count per unit of time and t is the total monitoring time
+
+e.g.
+suppose the number of people that show up at a bus stop is Poisson with a mean of 2.5 per hour, and we want to know the probability that at most 3 people show up in a 4 hour period. function ppois
+
+ppois(3,2.5*4,lower.tail = TRUE)
+
+### Binomial distribution
+binomial distribution is the discrete distribution of the number of successes, k, out of n independent binary trials, each with probability p. If n is large and p is small then the Poisson distribution with lambda equal to n*p is a good approximation to the binomial distribution.
+
+e.g.:
+at most 5 successes out of 1000 trials each of which has probability .01
+pbinom(5,1000,.01)
+ppois(5,1000*.01)
+
+
+
+
+
+
+
