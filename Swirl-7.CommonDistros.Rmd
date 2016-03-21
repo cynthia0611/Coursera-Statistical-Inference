@@ -1,0 +1,57 @@
+###Bernoulli
+only 2 possible outcomes,  binary trials
+
+Bernoulli random variables take only the values 1 and 0. Suppose we also specify that the probability that the Bernoulli outcome of 1 is p, probability of a 0 outcome is 1-p
+
+PMF of a Bernoulli distribution
+p^x * (1-p)^(1-x)
+
+mean
+p
+Add the two terms x*p(x) where x equals 0 and 1 respectively
+
+E(X^2)
+Add the two terms x^2*p(x) where x equals 0 and 1 respectively.
+p
+
+the variance of the Bernoulli random variable
+Var = E(X^2)-(E(X))^2
+p(1-p)
+
+The PMF of a binomial random variable X 
+choose(n,x) * p^x * (1-p)^(n-x)
+
+e.g.:
+Suppose we were going to flip a biased coin 5 times. The probability of tossing a head is .8 and a tail .2. What is the probability that you'll toss at least 3 heads.
+choose(5,3)*.8^3*.2^2+choose(5,4)*.8^4*.2^1+choose(5,5)*.8^5*.2^0
+pbinom(2,size=5,prob=.8,lower.tail = FALSE)
+
+###Normal or Gaussian
+X ~ N(mu, sigma^2)
+When mu = 0 and sigma = 1 the resulting distribution is called the standard normal distribution and it is often labeled Z.
+
+Approximately 68%, 95% and 99% of the normal density lie within 1, 2 and 3 standard deviations from the mean, respectively.
+
+The R function qnorm(prob) returns the value of x (quantile) for which the area under the standard normal distribution to the left of x equals the parameter prob.
+
+Z = (X -mu)/sigma is normally distributed with mean 0 and variance 1, i.e., Z ~ N(0, 1). (Z is standard normal.)
+
+The converse is also true. If Z is standard normal, i.e., Z ~ N(0,1), then the random variable X defined as X = mu + sigma*Z is normally distributed with mean mu and variance sigma^2, i.e., X ~ N(mu, sigma^2)
+
+#### calculating quantile
+These formulae allow you to easily compute quantiles (and thus percentiles) for ANY normally distributed variable if you know its mean and variance.R's qnorm function
+
+e.g. The 97.5th percentile of a normal distribution with mean 3 and standard deviation 2.
+qnorm(.975,3,2)
+
+X = mu + sigma*Z
+3+2*1.96
+
+#### calculating Probability
+Suppose you have a normal distribution with mean 1020 and standard deviation of 50 and you want to compute the probability that the associated random variable X > 1200.
+pnorm(1200,1020,50,lower.tail = FALSE)
+
+transform the given distribution to a standard normal
+pnorm((1200-1020)/50,lower.tail = FALSE)
+
+### Poisson
